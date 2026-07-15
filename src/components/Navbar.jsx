@@ -1,12 +1,12 @@
-import { Link } from 'react'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
     return (
         <nav>
             <Link to="/">Get Books</Link>
-            <Link to="/my-react-app/src/components/Create.jsx">Create a Book</Link>
-            <Link to="/my-react-app/src/components/Delete.jsx">Delete a Book</Link>
-            <Link to="/my-react-app/src/components/Update.jsx">Update a Book</Link>
+            <Link to="/Create">Create a Book</Link>
+            <Link to="/Delete">Delete a Book</Link>
+            <Link to="/Update">Update a Book</Link>
         </nav>
     )
 

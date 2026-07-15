@@ -1,11 +1,8 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
-import { createContext } from 'react';
-
+import { useEffect, useState, createContext } from 'react';
 
 const BooksContext = createContext();
 
-function Books({children}) {
+function Books({ children }) {
  const [books, setBooks] = useState([])
 
 useEffect(()=>{
@@ -21,7 +18,7 @@ function CreateBooks(bookInfo){
     body: JSON.stringify(bookInfo)
  })
  .then(response => response.json())
- .then(data => setBooks(...books(data))) 
+ .then(data => setBooks([...books, data])) 
 }
 
 function UpdateBooks(id, bookInfo) {
@@ -31,7 +28,7 @@ function UpdateBooks(id, bookInfo) {
     body: JSON.stringify(bookInfo)
  })
  .then(response => response.json())
- .then(data => setBooks(...books(data)))
+ .then(data => setBooks([...books, data]))
 }
 
 function DeleteBooks(id) {
@@ -39,7 +36,7 @@ function DeleteBooks(id) {
    method: "DELETE",
 })
 .then(response => response.json())
-.then(setBooks(books.filter(book => book.id !== id)))
+.then(() =>{setBooks(books.filter(book => book.id !== id))})
 
 }
 
