@@ -1,5 +1,4 @@
 // import React from 'react'
-// this should be a form to create a new book.
 
 import { useContext, useState } from "react";
 import { BooksContext } from "../context/Books"
