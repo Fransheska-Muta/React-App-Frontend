@@ -1,5 +1,4 @@
 // import React from 'react'
-// this should be a form to create a new book.
 
 import { useContext, useState } from "react";
 import { BooksContext } from "../context/Books"
@@ -8,14 +7,14 @@ function Create() {
  const { CreateBooks } = useContext(BooksContext)
  const [bookInfo, setBookInfo] = useState({})
 
- function ChangeInput (e){
-  const {name, value} = e.target
+ function ChangeInput (event){
+  const {name, value} = event.target
   setBookInfo({...bookInfo, [name]: value})
   
  }
 
- function SubmitBtn(e) {
-  e.preventDefault()
+ function SubmitBtn(event) {
+  event.preventDefault()
   CreateBooks(bookInfo)
   setBookInfo({title: "", author:""})
  }
