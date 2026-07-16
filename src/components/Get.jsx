@@ -5,7 +5,8 @@ import { useContext } from "react"
 
 function Get() {
   const { books } = useContext(BooksContext)
-
+  // console.log(books);
+  
   return (
     <>
         <h1>Get all Books</h1>
