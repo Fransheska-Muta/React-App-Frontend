@@ -9,8 +9,8 @@ function Update() {
  function ChangeInput (event){
   const {name, value} = event.target
   setBookInfo({...bookInfo, [name]: value})
-  
  }
+
   function SubmitBtn(event) {
     event.preventDefault()
     UpdateBooks(bookInfo.id, bookInfo);
