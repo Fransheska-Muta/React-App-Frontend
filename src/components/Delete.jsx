@@ -5,7 +5,7 @@ import { BooksContext } from "../context/Books"
 
 function Delete() {
   const { DeleteBooks } = useContext(BooksContext);
-  const [bookId, setBookId] = useState("");
+  const [bookId, setBookId] = useState();
 
   function ChangeInput (event){
     setBookId(event.target.value);
@@ -14,7 +14,7 @@ function Delete() {
   function SubmitBtn(event) {
     event.preventDefault()
     DeleteBooks(bookId)
-    setBookId("")
+    setBookId()
   }
 
   return (

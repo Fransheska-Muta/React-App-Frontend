@@ -1,6 +1,6 @@
 import { useEffect, useState, createContext } from 'react';
 
-export const BooksContext = createContext();
+const BooksContext = createContext();
 
 function Books({ children }) {
  const [books, setBooks] = useState([])
@@ -49,4 +49,4 @@ function DeleteBooks(id) {
 }
 
 export default Books;
-
+export { BooksContext };
