@@ -10,10 +10,11 @@ function Get() {
     <>
         <h1>Get all Books</h1>
         <ul>
-          {books.map((book) => ( <li key={book.id}>
+          {books.map((book) =>  
+              <li key={book.id}>
               <h2>{book.title}</h2>
               <h3>Author: {book.author}</h3>
-            </li>))}
+            </li>)}
         </ul>
     </>
   )

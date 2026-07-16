@@ -36,7 +36,7 @@ function DeleteBooks(id) {
    method: "DELETE",
 })
 .then(response => response.json())
-.then(() =>{setBooks(books.filter(book => book.id !== id))})
+.then(() =>setBooks(books.filter(book => book.id !== id)))
 
 }
 
